@@ -588,53 +588,153 @@ body.svg-background {
     }
 }
 
-/* WhatsApp Section */
-.whatsapp-section {
+/* Contact Section */
+.contact-section {
     padding: 100px 0;
     background-color: white;
 }
 
-.whatsapp-content {
+.contact-content {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-.whatsapp-image {
+.contact-image {
     width: 30%;
+    max-height: 450px;
+    overflow: hidden;
 }
 
-.whatsapp-text {
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contact-info {
     width: 65%;
 }
 
-.whatsapp-label {
-    font-size: 14px;
-    margin-bottom: 10px;
+.contact-info h2 {
+    display: inline-block;
+    font-family: var(--font-family-primary);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
 .phone-number {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-family: var(--font-family-primary);
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 25px;
 }
 
-.information-blocks {
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 25px;
+    margin-bottom: 40px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1da851;
+    color: white;
+}
+
+.info-columns {
     display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
+    gap: 50px;
 }
 
-.info-block {
-    width: 48%;
+.info-column {
+    width: calc(50% - 25px);
 }
 
-.social-links-footer {
-    margin-top: 40px;
+.info-column h4 {
+    font-family: var(--font-family-primary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 20px;
 }
 
-.social-links-footer a {
-    margin-right: 15px;
-    font-size: 24px;
+.schedule-item, .location-info {
+    margin-bottom: 15px;
+}
+
+.day, .location-name {
+    font-family: var(--font-family-secondary);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-text);
+    margin-bottom: 3px;
+}
+
+.hours, .location-address {
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-image, .contact-info {
+        width: 100%;
+    }
+    
+    .contact-image {
+        max-height: 350px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .info-column {
+        width: 100%;
+    }
+    
+    .phone-number {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 60px 0;
+    }
+    
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+    
+    .phone-number {
+        font-size: 1.6rem;
+    }
+    
+    .btn-whatsapp {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Newsletter Section: Cursos y Talleres */
