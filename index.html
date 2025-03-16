@@ -86,11 +86,11 @@
         
         <!-- Slider Navigation Arrows -->
         <div class="slider-arrows">
-            <button class="arrow arrow-prev">
-                <i class="fas fa-chevron-left"></i>
+            <button class="arrow arrow-prev" aria-label="Anterior">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <button class="arrow arrow-next">
-                <i class="fas fa-chevron-right"></i>
+            <button class="arrow arrow-next" aria-label="Siguiente">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
             </button>
         </div>
     </section>
@@ -235,8 +235,8 @@
                         <form class="newsletter-form">
                             <div class="input-group">
                                 <input type="email" placeholder="Correo electronico" required>
-                                <button type="submit" class="submit-button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <button type="submit" class="submit-button" aria-label="Enviar correo electrónico"></button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"></svg>
                                         <line x1="5" y1="12" x2="19" y2="12"></line>
                                         <polyline points="12 5 19 12 12 19"></polyline>
                                     </svg>
@@ -253,7 +253,7 @@
                                 <h3>Gracias por suscribirte!</h3>
                                 <p>Te mantendremos informado sobre nuestros cursos y talleres.</p>
                             </div>
-                            <button class="popup-button" id="acceptButton">Aceptar</button>
+                            <button class="popup-button" id="acceptButton" aria-label="Aceptar suscripción">Aceptar</button>
                         </div>
                     </div>
                 </div>
