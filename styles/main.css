@@ -9,6 +9,8 @@
     --color-beige: #e5c2a9;
     --color-gray: #cececa;
     --color-blue: #68c6f0;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
     --font-family-primary: 'Playfair Display', serif;
     --font-family-secondary: 'Raleway', sans-serif;
 }
@@ -188,7 +190,7 @@ footer {
 
 .footer-copyright {
     font-size: 14px;
-    color: var(--color-light-gray);
+    color: var(--color-black);
 }
 
 /* Responsive styles */
