@@ -246,6 +246,79 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Add this to your existing slider JavaScript
+function fixCatalogButtons() {
+    // Get all catalog buttons
+    const catalogButtons = document.querySelectorAll('.btn-catalog');
+    
+    catalogButtons.forEach(button => {
+        // Ensure proper click handling
+        button.addEventListener('click', function(e) {
+            // Stop the click from being captured by slider navigation
+            e.stopPropagation();
+            
+            // Get the href
+            const href = this.getAttribute('href');
+            
+            // If it's a PDF or external link, open in new tab
+            if (href && (href.endsWith('.pdf') || href.startsWith('http'))) {
+                window.open(href, '_blank', 'noopener');
+            }
+        });
+        
+        // Add visual feedback
+        button.addEventListener('mousedown', function() {
+            this.style.transform = 'translateY(1px)';
+        });
+        
+        button.addEventListener('mouseup', function() {
+            this.style.transform = '';
+        });
+        
+        // Make sure touch events work properly
+        button.addEventListener('touchstart', function() {
+            this.style.transform = 'translateY(1px)';
+        }, { passive: true });
+        
+        button.addEventListener('touchend', function() {
+            this.style.transform = '';
+        }, { passive: true });
+    });
+}
+
+// Function to track catalog clicks (optional)
+function trackCatalogClick(slideName) {
+    console.log(`Catalog viewed from: ${slideName}`);
+    // You could add analytics tracking here if needed
+}
+
+// Call this function after slider initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // After slider is initialized
+    fixCatalogButtons();
+});
+
+// Add this to your existing slider to prevent navigation when clicking on the button
+function setupSlideContentClicks() {
+    const slideContents = document.querySelectorAll('.slide-content');
+    
+    slideContents.forEach(content => {
+        content.addEventListener('click', function(e) {
+            // Check if click was on or inside a button or link
+            if (e.target.closest('a, button')) {
+                // Don't do anything, let the link/button handle it
+                return;
+            }
+            
+            // Otherwise, prevent the click from triggering slide navigation
+            e.stopPropagation();
+        });
+    });
+}
+
+// Call this function as part of slider initialization
+setupSlideContentClicks();
+
 document.addEventListener('DOMContentLoaded', function() {
     const newsletterForm = document.querySelector('.newsletter-form');
     const popup = document.getElementById('subscriptionPopup');

@@ -469,6 +469,7 @@
     line-height: 1.2;
 }
 
+/* Fix for catalog button in slider */
 .btn-catalog {
     background-color: rgba(249, 244, 242, 0.7);
     color: var(--color-text);
@@ -476,14 +477,57 @@
     font-size: 12px;
     letter-spacing: 1px;
     padding: 12px 25px;
-    border: none;
+    display: inline-block;
     font-family: var(--font-family-secondary);
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    z-index: 10; /* Ensure button is above other elements */
+    position: relative; /* Create stacking context */
+    border: none;
+    text-decoration: none;
 }
 
 .btn-catalog:hover {
     background-color: rgba(249, 244, 242, 0.9);
+    transform: translateY(-2px); /* Slight hover effect */
+}
+
+.btn-catalog:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+/* Ensure slide content is clickable */
+.slide-content {
+    position: relative;
+    z-index: 5; /* Ensure content is above background */
+    margin-left: 8%;
+    color: var(--color-text);
+    max-width: 600px;
+    text-align: left;
+    padding-bottom: 150px;
+    pointer-events: auto; /* Ensure clicks register */
+}
+
+/* Prevent other elements from blocking clicks */
+.slide-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-background);
+    z-index: 1;
+    pointer-events: none; /* Prevent background from capturing clicks */
+}
+
+/* Fix for mobile */
+@media (max-width: 768px) {
+    .btn-catalog {
+        padding: 15px 25px; /* Larger touch target on mobile */
+    }
 }
 
 /* Slider Thumbnails */
