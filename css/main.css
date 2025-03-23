@@ -1,17 +1,86 @@
 :root {
-    --color-background: #f9f4f2;
-    --color-text: #342d27;
-    --color-primary: #94634b;
-    --color-secondary: #b08669;
-    --color-accent: #cfaa97;
-    --color-light-gray: #a49b93;
-    --color-beige: #e5c2a9;
-    --color-gray: #cececa;
-    --color-blue: #68c6f0;
+    /* Base Colors */
+    --color-background: #f9f6f0; /* Slightly warmer beige for background */
+    --color-text: #33302a; /* Deep brown-black for text */
+    --color-text-header: white;
+    
+    /* Gold Palette */
+    --color-primary: #c5a050; /* Rich gold - main accent */
+    --color-secondary: #dbb867; /* Lighter gold for secondary elements */
+    --color-accent: #b08c38; /* Deeper gold for accents */
+    
+    /* Supporting Colors */
+    --color-light-gold: #e8d6a5; /* Very light gold for subtle highlights */
+    --color-dark-gold: #8a6e2f; /* Dark gold for strong contrast elements */
+    --color-light-gray: #a4a093; /* Neutral gray with gold undertone */
+    --color-gray: #d0cdc5; /* Light gray with warm undertone */
+    
+    /* Standard Colors */
     --color-white: #FFFFFF;
     --color-black: #000000;
+    
+    /* Fonts remain unchanged */
     --font-family-primary: 'Playfair Display', serif;
     --font-family-secondary: 'Raleway', sans-serif;
+}
+
+/* Button adjustments for gold theme */
+.btn {
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+/* WhatsApp button keeps its brand color */
+.btn-whatsapp {
+    background-color: #25D366;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1da851;
+}
+
+/* Section title highlight adjustment */
+.section-title::before {
+    background-color: var(--color-light-gold);
+}
+
+/* Service items with gold accents */
+.service-item.active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.service-item:hover {
+    color: var(--color-primary);
+}
+
+/* Update map link colors */
+.map-link:hover {
+    color: var(--color-primary);
+}
+
+.map-link::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c5a050' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E");
+}
+
+/* Slider controls with gold accents */
+.arrow:hover {
+    background-color: rgba(197, 160, 80, 0.3);
+}
+
+.dot.active {
+    background-color: var(--color-primary);
+}
+
+
+/* Footer links */
+footer a:hover {
+    color: var(--color-primary);
 }
 
 * {
@@ -57,7 +126,7 @@ p {
 }
 
 a {
-    color: var(--color-text);
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -122,7 +191,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(249, 244, 242, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 15px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
