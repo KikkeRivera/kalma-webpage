@@ -224,6 +224,46 @@
     }
 }
 
+/* Standardized Image Container */
+.wellbeing-image-container {
+    width: 45%;
+    height: 450px; /* Fixed height */
+    overflow: hidden;
+    position: relative;
+}
+
+.wellbeing-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is the key property */
+    object-position: center;
+    transition: opacity 0.4s ease-in-out; /* Smooth transition */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Media Queries for Responsive Sizing */
+@media (max-width: 992px) {
+    .wellbeing-image-container {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wellbeing-image-container {
+        height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wellbeing-image-container {
+        height: 300px;
+    }
+}
+
 /* Section Responsive Layouts */
 @media (max-width: 992px) {
     .wellbeing-section,
@@ -385,7 +425,20 @@
     animation: fadeContent 0.5s ease forwards;
 }
 
+/* Loading effect for image transitions */
+.wellbeing-image-container.loading img {
+    opacity: 0.7;
+}
 
+/* Animation for content changes */
+@keyframes fadeContent {
+    0% { opacity: 0.7; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#service-title, #service-description {
+    animation: fadeContent 0.5s ease forwards;
+}
 
 /* Newsletter Section Responsive */
 @media (max-width: 992px) {
