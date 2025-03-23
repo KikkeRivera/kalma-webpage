@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'default': {
             title: 'Kalma Spa & Massage',
             description: 'Kalma es un centro de masajes y terapias orientales enfocado en el bienestar físico, mental y emocional. Más que un lugar, es un espacio para que te escuches, equilibres tu energía y fortalezcas tu mente. Ofrecemos terapias naturales para mejorar tu calidad de vida, como masajes, reflexoterapia, terapias orientales, estiramientos asistidos, cosmetología y belleza.',
-            image: 'img/bienestar.webp'
+            image: 'img/Kalma_Logo.webp'
         },
         'masaje-deportivo': {
             title: 'Masaje Deportivo',
