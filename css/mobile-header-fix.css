@@ -1,0 +1,78 @@
+/* Mobile Header Fix
+   - Improves logo and menu alignment on mobile
+   - Adjusts header height and spacing
+*/
+
+@media (max-width: 768px) {
+    /* Header container adjustments */
+    header {
+        height: 60px; /* Fixed height for mobile */
+        padding: 0;
+        display: flex;
+        align-items: center;
+        background-color: #0a0a0a; /* Dark background to match the screenshot */
+    }
+    
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    /* Logo adjustments */
+    .logo {
+        position: relative;
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo img {
+        height: 35px; /* Slightly reduced size */
+        width: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    /* Mobile menu toggle button */
+    .mobile-menu-toggle {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: none;
+        border: none;
+        padding: 0;
+        position: relative;
+        cursor: pointer;
+        z-index: 100;
+    }
+    
+    .mobile-menu-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: var(--color-primary); /* Gold color for menu bars */
+        margin: 5px 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        border-radius: 1px;
+    }
+    
+    /* Adjust hero slider to account for header */
+    .hero-slider {
+        margin-top: 60px; /* Match header height */
+    }
+}
+
+/* Specific fixes for very small screens */
+@media (max-width: 375px) {
+    .logo img {
+        height: 30px; /* Even smaller on very small screens */
+    }
+    
+    .header-container {
+        padding: 0 10px; /* Less padding on very small screens */
+    }
+}

@@ -1,0 +1,53 @@
+/* Mobile Slider Adjustments
+   - Hides arrows on mobile devices
+   - Improves mobile slider experience
+*/
+
+@media (max-width: 768px) {
+    /* Hide slider arrows on mobile */
+    .slider-arrows,
+    .arrow-prev,
+    .arrow-next,
+    .mobile-arrows {
+        display: none !important; /* Use !important to override any other styles */
+    }
+    
+    /* Adjust slider content for better mobile display */
+    .slide-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 20px;
+        padding-bottom: 80px; /* Space for dots if present */
+        text-align: center;
+    }
+    
+    .slide h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .slide-location {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Ensure the catalog button is clearly visible */
+    .btn-catalog {
+        padding: 12px 25px;
+        font-size: 14px;
+        background-color: rgba(var(--color-primary-rgb, 197, 160, 80), 0.9); /* More solid background */
+    }
+    
+    /* Center button on slide */
+    .slide .btn-catalog {
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+
+/* Extra-small screens */
+@media (max-width: 576px) {
+    .slide h1 {
+        font-size: 1.7rem;
+    }
+}
