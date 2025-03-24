@@ -1,0 +1,219 @@
+/* Standardized Image Container */
+.wellbeing-image-container {
+    width: 45%;
+    height: 450px; /* Fixed height */
+    overflow: hidden;
+    position: relative;
+}
+
+.wellbeing-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is the key property */
+    object-position: center;
+    transition: opacity 0.4s ease-in-out; /* Smooth transition */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Service Item Styles with Active State */
+.service-item {
+    flex: 1;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.service-item:hover {
+    color: var(--color-primary);
+}
+
+.service-item.active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    font-weight: 500;
+}
+
+/* Animation for content changes */
+@keyframes fadeContent {
+    0% { opacity: 0.7; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#service-title, #service-description {
+    animation: fadeContent 0.5s ease forwards;
+}
+
+/* Loading effect for image transitions */
+.wellbeing-image-container.loading img {
+    opacity: 0.7;
+}
+
+/* Animation for content changes */
+@keyframes fadeContent {
+    0% { opacity: 0.7; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#service-title, #service-description {
+    animation: fadeContent 0.5s ease forwards;
+}
+
+/* Wellbeing Section - Balanced Layout */
+.wellbeing-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.wellbeing-content {
+    display: flex;
+    align-items: flex-start; /* Align to top instead of center */
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.wellbeing-image {
+    width: 45%;
+    max-height: 550px; /* Control image container height */
+    overflow: hidden;
+}
+
+.wellbeing-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.wellbeing-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wellbeing-text h2 {
+    font-family: var(--font-family-primary);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.wellbeing-text p {
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: var(--color-text);
+}
+
+.btn-services {
+    background-color: #94634b;
+    color: white;
+    padding: 12px 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-bottom: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-services:hover {
+    background-color: #7a5039;
+}
+
+.services-list {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.services-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 0;
+}
+
+.service-item {
+    flex: 1;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .wellbeing-content {
+        flex-direction: column;
+    }
+
+    .wellbeing-image-container {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+    
+    .wellbeing-image,
+    .wellbeing-text {
+        width: 100%;
+    }
+    
+    .wellbeing-image {
+        max-height: 450px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wellbeing-section {
+        padding: 70px 0;
+    }
+    
+    .wellbeing-image-container {
+        height: 350px;
+    }
+
+    .wellbeing-text h2 {
+        font-size: 2.2rem;
+    }
+    
+    .services-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .wellbeing-section {
+        padding: 50px 0;
+    }
+
+    .wellbeing-image-container {
+        height: 300px;
+    }
+    
+    .wellbeing-text h2 {
+        font-size: 2rem;
+    }
+    
+    .wellbeing-image {
+        max-height: 350px;
+    }
+}

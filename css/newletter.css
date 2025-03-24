@@ -1,0 +1,176 @@
+/* Newsletter Section: Cursos y Talleres */
+.newsletter-section {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+    color: #fff;
+}
+
+.newsletter-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.newsletter-text {
+    width: 45%;
+    padding-right: 40px;
+}
+
+.newsletter-text h2 {
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.newsletter-text p {
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.newsletter-form-container {
+    width: 55%;
+}
+
+.newsletter-form {
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    padding: 15px 0;
+    color: #fff;
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.submit-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    padding: 15px 0 15px 15px;
+}
+
+.submit-button:hover {
+    transform: translateX(5px);
+}
+
+.submit-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.form-note {
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .newsletter-content {
+        flex-direction: column;
+    }
+    
+    .newsletter-text, 
+    .newsletter-form-container {
+        width: 100%;
+    }
+    
+    .newsletter-text {
+        margin-bottom: 40px;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .newsletter-section {
+        padding: 50px 0;
+    }
+    
+    .newsletter-text h2 {
+        font-size: 14px;
+    }
+    
+    .newsletter-text p, 
+    .input-group input {
+        font-size: 15px;
+    }
+    
+    .form-note {
+        font-size: 13px;
+    }
+}
+/* Newsletter Section Responsive */
+@media (max-width: 992px) {
+    .newsletter-content {
+        flex-direction: column;
+    }
+    
+    .newsletter-text, 
+    .newsletter-form-container {
+        width: 100%;
+    }
+    
+    .newsletter-text {
+        margin-bottom: 40px;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .newsletter-section {
+        padding: 40px 0;
+    }
+    
+    .newsletter-text h2 {
+        font-size: 14px;
+    }
+    
+    .newsletter-text p {
+        font-size: 14px;
+    }
+    
+    .form-note {
+        font-size: 12px;
+    }
+}

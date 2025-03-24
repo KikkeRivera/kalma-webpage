@@ -1,0 +1,66 @@
+/* Custom Popup Notification */
+.popup-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    max-width: 350px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+.popup-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+.popup-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.popup-message {
+    margin-bottom: 15px;
+}
+.popup-message h3 {
+    font-family: var(--font-family-primary);
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+.popup-message p {
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+}
+.popup-button {
+    align-self: flex-end;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.popup-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 576px) {
+    .popup-notification {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        max-width: none;
+    }
+}

@@ -1,0 +1,89 @@
+/* Section Title Highlight Styling */
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: var(--color-text);
+    z-index: 1;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: 5px;
+    height: 20px;
+    width: 25%;
+    background-color: rgba(227, 208, 197, 0.6); /* Light beige/pink color */
+    z-index: -1;
+}
+
+/* Background with 6 Vertical Lines */
+body {
+    position: relative;
+    background-color: var(--color-background);
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+        /* Line 1 at left edge (0%) */
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 0, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        /* Line 2 at 20% */
+        linear-gradient(to right, transparent calc(20% - 1px), rgba(0, 0, 0, 0.05) calc(20% - 1px), rgba(0, 0, 0, 0.05) 20%, transparent 20%),
+        /* Line 3 at 40% */
+        linear-gradient(to right, transparent calc(40% - 1px), rgba(0, 0, 0, 0.05) calc(40% - 1px), rgba(0, 0, 0, 0.05) 40%, transparent 40%),
+        /* Line 4 at 60% */
+        linear-gradient(to right, transparent calc(60% - 1px), rgba(0, 0, 0, 0.05) calc(60% - 1px), rgba(0, 0, 0, 0.05) 60%, transparent 60%),
+        /* Line 5 at 80% */
+        linear-gradient(to right, transparent calc(80% - 1px), rgba(0, 0, 0, 0.05) calc(80% - 1px), rgba(0, 0, 0, 0.05) 80%, transparent 80%),
+        /* Line 6 at right edge (100%) */
+        linear-gradient(to right, transparent calc(100% - 1px), rgba(0, 0, 0, 0.05) calc(100% - 1px), rgba(0, 0, 0, 0.05) 100%);
+}
+
+/* For white background sections */
+.white-section {
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+
+.white-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+        /* Line 1 at left edge (0%) */
+        linear-gradient(to right, transparent calc(5% - 1px),  rgba(0, 0, 0, 0.03) calc(5% - 1px),  rgba(0, 0, 0, 0.03) 5%, transparent 5%),
+        /* Line 2 at 20% */
+        linear-gradient(to right, transparent calc(20% - 1px), rgba(0, 0, 0, 0.03) calc(20% - 1px), rgba(0, 0, 0, 0.03) 20%, transparent 20%),
+        /* Line 3 at 40% */
+        linear-gradient(to right, transparent calc(40% - 1px), rgba(0, 0, 0, 0.03) calc(40% - 1px), rgba(0, 0, 0, 0.03) 40%, transparent 40%),
+        /* Line 4 at 60% */
+        linear-gradient(to right, transparent calc(60% - 1px), rgba(0, 0, 0, 0.03) calc(60% - 1px), rgba(0, 0, 0, 0.03) 60%, transparent 60%),
+        /* Line 5 at 80% */
+        linear-gradient(to right, transparent calc(80% - 1px), rgba(0, 0, 0, 0.03) calc(80% - 1px), rgba(0, 0, 0, 0.03) 80%, transparent 80%),
+        /* Line 6 at right edge (100%) */
+        linear-gradient(to right, transparent calc(95% - 1px), rgba(0, 0, 0, 0.03) calc(95% - 1px), rgba(0, 0, 0, 0.03) 95%, transparent 95%);
+}
+
+/* Alternative SVG approach for more precise control */
+body.svg-background {
+    background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='verticalLines' width='100%25' height='100%25' patternUnits='userSpaceOnUse'%3E%3Cline x1='0%25' y1='0' x2='0%25' y2='100%25' stroke='rgba(0, 0, 0, 0.05)' stroke-width='1'/%3E%3Cline x1='20%25' y1='0' x2='20%25' y2='100%25' stroke='rgba(0, 0, 0, 0.05)' stroke-width='1'/%3E%3Cline x1='40%25' y1='0' x2='40%25' y2='100%25' stroke='rgba(0, 0, 0, 0.05)' stroke-width='1'/%3E%3Cline x1='60%25' y1='0' x2='60%25' y2='100%25' stroke='rgba(0, 0, 0, 0.05)' stroke-width='1'/%3E%3Cline x1='80%25' y1='0' x2='80%25' y2='100%25' stroke='rgba(0, 0, 0, 0.05)' stroke-width='1'/%3E%3Cline x1='100%25' y1='0' x2='100%25' y2='100%25' stroke='rgba(0, 0, 0, 0.05)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='%23f9f4f2'/%3E%3Crect width='100%25' height='100%25' fill='url(%23verticalLines)'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+}
