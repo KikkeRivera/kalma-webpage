@@ -1,20 +1,19 @@
 /* Standardized Image Container */
 .wellbeing-image-container {
     width: 45%;
-    height: 450px; /* Fixed height */
+    max-height: 450px; /* Changed from fixed height to max-height */
     overflow: hidden;
     position: relative;
 }
 
 .wellbeing-image-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* This is the key property */
+    height: auto; /* Changed from 100% to auto */
+    object-fit: contain; /* Changed from cover to contain */
     object-position: center;
     transition: opacity 0.4s ease-in-out; /* Smooth transition */
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative; /* Changed from absolute to relative */
+    max-height: 450px; /* Added max-height */
 }
 
 /* Service Item Styles with Active State */
@@ -50,18 +49,8 @@
 }
 
 /* Loading effect for image transitions */
-.wellbeing-image-container.loading img {
+.wellbeing-image.loading img {
     opacity: 0.7;
-}
-
-/* Animation for content changes */
-@keyframes fadeContent {
-    0% { opacity: 0.7; transform: translateY(5px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-#service-title, #service-description {
-    animation: fadeContent 0.5s ease forwards;
 }
 
 /* Wellbeing Section - Balanced Layout */
@@ -88,13 +77,15 @@
     width: 45%;
     max-height: 550px; /* Control image container height */
     overflow: hidden;
+    transition: opacity 0.4s ease-in-out; /* Added smooth transition */
 }
 
 .wellbeing-image img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain; /* Changed from cover to contain */
     display: block;
+    max-height: 550px; /* Added max-height */
 }
 
 .wellbeing-text {
@@ -166,7 +157,7 @@
 
     .wellbeing-image-container {
         width: 100%;
-        height: 400px;
+        max-height: 400px; /* Changed from height to max-height */
         margin-bottom: 30px;
     }
     
@@ -187,7 +178,7 @@
     }
     
     .wellbeing-image-container {
-        height: 350px;
+        max-height: 350px; /* Changed from height to max-height */
     }
 
     .wellbeing-text h2 {
@@ -206,7 +197,7 @@
     }
 
     .wellbeing-image-container {
-        height: 300px;
+        max-height: 300px; /* Changed from height to max-height */
     }
     
     .wellbeing-text h2 {

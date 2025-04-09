@@ -12,32 +12,32 @@ document.addEventListener('DOMContentLoaded', function() {
         'masaje-deportivo': {
             title: 'Masaje Deportivo',
             description: 'Diseñado específicamente para atletas y personas activas, nuestro masaje deportivo ayuda a prevenir lesiones, mejorar el rendimiento y acelerar la recuperación muscular. Utilizamos técnicas especializadas para aliviar la tensión y el dolor muscular.',
-            image: 'img/Masajes/Kalma_Masaje_Deportivo.webp'
+            image: 'img/Masajes/Kalma_MasajeDeportivo.webp'
         },
         'experiencia-aterrar': {
             title: 'Experiencia Aterrar',
             description: 'Una experiencia única que te ayuda a reconectar con la tierra y liberar el estrés acumulado. Combina técnicas de respiración, presión y aromaterapia para calmar el sistema nervioso y promover una sensación de estabilidad y paz interior.',
-            image: 'img/Masajes/Kalma_Aterrar_Exp.webp'
+            image: 'img/Masajes/Kama_MetodoAterrar.webp'
         },
         'indian-head': {
             title: 'Indian Head',
             description: 'Basado en la antigua técnica ayurvédica, este masaje se enfoca en la cabeza, cuello y hombros, donde solemos acumular mayor tensión. Ayuda a aliviar dolores de cabeza, mejorar la concentración y reducir el estrés mental y emocional.',
-            image: 'img/Masajes/Kalma_Indian_Head.webp'
+            image: 'img/Masajes/Kalma_IndianHead.webp'
         },
         'upgrade-30': {
             title: 'Upgrade 30 minutos',
             description: 'Extiende tu sesión de relajación con 30 minutos adicionales para enfocarte en áreas específicas que necesitan mayor atención. Este complemento perfecto te permite personalizar tu experiencia y maximizar los beneficios de tu tratamiento.',
-            image: 'https://ext.same-assets.com/930960530/1167302942.webp'
+            image: 'img/Masajes/Kalma_Upgrade30.webp'
         },
         'masaje-podal': {
             title: 'Masaje Podal',
             description: 'A través de la reflexología, este masaje estimula puntos específicos en los pies que se conectan con diferentes órganos y sistemas del cuerpo. Ayuda a mejorar la circulación, aliviar dolores corporales y promover un bienestar general.',
-            image: 'img/Masajes/Kalma_Masaje_Podal.webp'
+            image: 'img/Masajes/Kalma_MasajePodal.webp'
         },
         'ritual-compartir': {
             title: 'Ritual para Compartir',
             description: 'Una experiencia diseñada para parejas o amigos que desean disfrutar juntos de un momento de relajación. Incluye tratamientos simultáneos en un ambiente íntimo y acogedor, ideal para celebrar ocasiones especiales o simplemente reconectar.',
-            image: 'https://ext.same-assets.com/930960530/1167302942.webp'
+            image: 'img/Masajes/Kalma_RitualCompartir.webp'
         }
     };
 
